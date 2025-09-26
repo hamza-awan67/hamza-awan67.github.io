@@ -25,3 +25,20 @@ a:hover {
   text-decoration: underline;
   color: darkred;
 }
+ul {
+  background-color: #f9f9f9;
+  padding: 10px;
+  list-style-type: square;
+}
+
+.highlight {
+  background-color: yellow;
+  padding: 5px;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+}
