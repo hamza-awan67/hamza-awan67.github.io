@@ -1,0 +1,172 @@
+/* =========================
+   CSS VARIABLES
+========================= */
+:root {
+  --main-color: #6a0dad;
+  --accent-color: #071ecd;
+  --bg-color: rgb(209, 146, 30);
+  --text-color: #333333;
+  --link-color: #0056b3;
+  --hover-color: #b30000;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  background: var(--main-bg);
+  font-family: var(--heading-font);
+  color: var(--text-color);
+  padding: 40px;
+  margin: 0px;
+  min-height: 700px;
+  width: 1200px;
+  display: block;
+  text-align: left;
+  line-height: 24px;
+  transition: background 500ms ease-in-out, opacity 400ms ease;
+}
+
+/* Subtle fade effect on hover */
+body:hover {
+  background: linear-gradient(135deg, #6b9fad, #aa9a4c);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+  color: var(--accent-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 400ms ease, color 400ms ease;
+  margin-bottom: 25px;
+}
+
+h1:hover {
+  transform: scale(1.1);
+  color: #8e44ad;
+}
+
+h2 {
+  color: #1b4f72;
+  margin-top: 30px;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 600;
+  border-left: 6px solid #6a0dad;
+  padding-left: 10px;
+  transition: letter-spacing 400ms ease, color 400ms ease;
+}
+
+h2:hover {
+  color: #154360;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   PARAGRAPHS & LIST ITEMS
+========================= */
+p,
+li {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+  color: var(--text-color);
+  margin-bottom: 12px;
+  transition: transform 400ms ease, color 400ms ease;
+}
+
+/* Slight movement and color change on hover */
+p:hover, li:hover {
+  transform: translateX(5px);
+  color: #000000;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: color 300ms ease, border-bottom 300ms ease, transform 300ms ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  border-bottom: 2px solid var(--link-hover);
+  transform: scale(1.05);
+}
+
+/* =========================
+   LISTS
+========================= */
+ul {
+  background: var(--card-bg);
+  padding: 20px;
+  list-style-type: square;
+  list-style-image: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+  transition: box-shadow 400ms ease, transform 400ms ease;
+}
+
+/* Glow up list on hover */
+ul:hover {
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+/* =========================
+   HIGHLIGHT CLASS
+========================= */
+.highlight {
+  background-color: var(--highlight-color);
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 400ms ease, transform 400ms ease, box-shadow 400ms ease;
+}
+
+.highlight:hover {
+  background-color: #fff176;    
+  transform: scale(1.05);
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   FOOTER
+========================= */
+#footer {
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  border-top: 2px solid white;
+  border-radius: 10px;
+  width: 1170px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.4);
+  transition: background 400ms ease, transform 400ms ease;
+}
+
+/* Lift-up footer animation on hover */
+#footer:hover {
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+}
