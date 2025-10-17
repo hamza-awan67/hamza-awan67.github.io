@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Hamza Awan — Lab Task 05</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="top-section">
+    <h1>Muhammad Hamza Awan</h1>
+    <a href="#form">Contact Me</a>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="about-section card">
+      <h2><span>About</span> <span>Me</span></h2>
+      <p>
+        Hi! I'm <strong>Muhammad Hamza Awan</strong>, a Computer Science student at
+        <em>Quaid-e-Azam University</em>. I love exploring new technologies,
+        building web applications, and contributing to open-source projects.
+      </p>
+    </section>
+
+    <!-- INTERESTS -->
+    <section id="interests" class="card">
+      <h2>My Interests</h2>
+      <ul>
+        <li>Frontend Development (HTML, CSS, JavaScript)</li>
+        <li>Graphic Design</li>
+        <li>Machine Learning</li>
+        <li>Open Source Contributions</li>
+      </ul>
+    </section>
+
+    <!-- EDUCATION TABLE -->
+    <section id="education" class="card">
+      <h2>Educational Background</h2>
+      <table>
+        <caption>My Academic Record</caption>
+        <thead>
+          <tr>
+            <th>Degree</th>
+            <th>Institution</th>
+            <th>Year</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Matriculation</td>
+            <td>Govt. High School</td>
+            <td>2018</td>
+            <td>A+</td>
+          </tr>
+          <tr>
+            <td>Intermediate</td>
+            <td>Punjab College</td>
+            <td>2020</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>Bachelor of Computer Science</td>
+            <td>Quaid-e-Azam University</td>
+            <td>2021 – 2025</td>
+            <td>In Progress</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="form" class="card form-section">
+      <h2>Get in Touch</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Contact Information</legend>
+
+          <!-- Basic Inputs -->
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter a secure password" required>
+
+          <!-- Radio Buttons -->
+          <p class="sub-title">Gender:</p>
+          <label><input type="radio" name="gender" value="male" required> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+
+          <!-- Checkboxes -->
+          <p class="sub-title">Areas of Interest:</p>
+          <label><input type="checkbox" name="interest" value="frontend"> Frontend Development</label>
+          <label><input type="checkbox" name="interest" value="machine-learning"> Machine Learning</label>
+          <label><input type="checkbox" name="interest" value="graphic-design"> Graphic Design</label>
+
+          <!-- Dropdown -->
+          <label for="topic">Preferred Contact Topic:</label>
+          <select id="topic" name="topic" required>
+            <option value="">--Select a Topic--</option>
+            <option>Internship Opportunities</option>
+            <option>Collaboration</option>
+            <option>Project Help</option>
+            <option>General Query</option>
+          </select>
+
+          <!-- Textarea -->
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+
+          <!-- Buttons -->
+          <div class="form-buttons">
+            <button type="submit">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Muhammad Hamza Awan — All rights reserved.</p>
+  </footer>
+</body>
+</html>
