@@ -1,0 +1,175 @@
+/* Lab Task 05 */
+
+/* General Layout */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #155dfc, #6ea8fe);
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card style for sections */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin: 20px auto;
+  width: 85%;
+  max-width: 800px;
+  transition: 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.top-section {
+  text-align: center;
+  padding: 25px;
+  color: white;
+}
+.top-section > a {
+  background: white;
+  color: #155dfc;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.top-section > a:hover {
+  background: #e0e7ff;
+  color: #0036cc;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #0036cc;
+}
+h2 span:first-child {
+  color: #002a99;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+caption {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #0036cc;
+}
+th, td {
+  border: 1px solid #d9e1ff;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #0036cc;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f5ff;
+}
+tr:hover {
+  background-color: #dbe4ff;
+  transition: 0.3s;
+}
+
+/* Form Section */
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+fieldset {
+  border: 2px solid #0036cc;
+  border-radius: 10px;
+  padding: 20px;
+}
+legend {
+  font-weight: bold;
+  color: #0036cc;
+  font-size: 1.1rem;
+}
+label {
+  margin-top: 10px;
+  display: block;
+  font-weight: 600;
+  color: #333;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  transition: 0.3s ease;
+  background-color: #f9fbff;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #0036cc;
+  box-shadow: 0 0 6px rgba(0, 54, 204, 0.4);
+  background-color: white;
+}
+
+/* Radio & Checkbox */
+input[type="radio"], input[type="checkbox"] {
+  accent-color: #0036cc;
+  margin-right: 6px;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0036cc, #5a8bff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #002a99, #4a77ff);
+}
+.reset-btn {
+  background: #ccc;
+  color: #333;
+}
+.reset-btn:hover {
+  background: #999;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: white;
+  margin: 25px 0 10px;
+  font-size: 0.9rem;
+}
