@@ -1,0 +1,178 @@
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0a0a2a, #0044cc, #0084ff);
+  color: #fff;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.top-section {
+  background: linear-gradient(135deg, #002d9c, #0066ff);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.navbar {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar a::after {
+  content:"";
+  position:absolute;
+  width:0%;
+  height:3px;
+  bottom:-5px;
+  left:0;
+  background:#ffea00;
+  transition:0.3s;
+}
+
+.navbar a:hover::after { width:100%; }
+
+/* use GRID in main */
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 25px;
+  padding: 20px;
+}
+
+/*grid  ABOUT SECTION */
+.about-section {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  justify-self: center;
+}
+
+.about-text h2 { margin-top: 0; }
+
+/*use grid in  INTERESTS,EDUCATION and SKILLS  */
+#interests { grid-column: 1 / 7; }
+#education { grid-column: 7 / -1; }
+
+
+.skills-section { grid-column: 1 / -1; }
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: linear-gradient(135deg,#56ccf2,#2f80ed);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.skill-card:hover { transform: translateY(-8px); }
+
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom:10px;
+  border: 2px solid #fff;
+}
+
+/* FORM */
+#form { grid-column: 1 / -1; }
+
+fieldset {
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin-top:5px;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  background: rgba(255,255,255,0.9);
+}
+
+button {
+  padding:10px 25px;
+  border:none;
+  border-radius:8px;
+  background: linear-gradient(135deg,#009ffd,#2a2a72);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+button:hover { transform: scale(1.05); }
+
+/* TABLE */
+table {
+  width:100%;
+  border-collapse: collapse;
+  margin-top:10px;
+}
+
+th, td {
+  border:1px solid rgba(255,255,255,0.3);
+  padding:8px;
+}
+
+th { background: rgba(0,54,204,0.7); }
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius:15px;
+  backdrop-filter: blur(10px);
+  box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:15px 0;
+  background: linear-gradient(135deg,#002d9c,#0066ff);
+  margin-top:auto;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .about-section { grid-template-columns: 1fr; text-align:center; }
+  #interests, #education { grid-column: 1 / -1; }
+  .skills-container { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+}
+
+@media(max-width:600px){
+  .skills-container { grid-template-columns: 1fr; }
+  .about-section img { width: 80%; margin: 0 auto; }
+}
